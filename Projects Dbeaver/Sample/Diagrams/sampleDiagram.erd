@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="sampleDiagram.erd">
+	<entities>
+		<data-source id="mysql8-1845efba160-5b6afc693b75c7b6">
+			<entity id="1" name="alumno" fq-name="sample.alumno" order="0" x="403" y="122">
+				<path name="sample"/>
+			</entity>
+			<entity id="2" name="alumno_carrera" fq-name="sample.alumno_carrera" order="1" x="17" y="124">
+				<path name="sample"/>
+			</entity>
+			<entity id="3" name="carrera" fq-name="sample.carrera" order="2" x="211" y="20">
+				<path name="sample"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="alumno_carrera_FK" fq-name="sample.alumno_carrera.alumno_carrera_FK" type="fk" pk-ref="1" fk-ref="2"/>
+		<relation name="vfk_carrera_alumno" type="vfk" pk-ref="1" fk-ref="3"/>
+		<relation name="alumno_carrera_FK_1" fq-name="sample.alumno_carrera.alumno_carrera_FK_1" type="fk" pk-ref="3" fk-ref="2"/>
+	</relations>
+</diagram>
