@@ -1,0 +1,4 @@
+#Ignorar archivos propios de proyectos en Dbeaver
+/Projects Dbeaver/*/.dbeaver
+/Projects Dbeaver/*/.settings
+/Projects Dbeaver/*/.project

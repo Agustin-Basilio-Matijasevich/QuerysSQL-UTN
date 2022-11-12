@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="PinacotecaDiagram.erd">
+	<entities>
+		<data-source id="mysql8-1845efb9340-14d97b1a478073a3">
+			<entity id="1" name="cuadro" fq-name="pinacoteca.cuadro" order="0" x="20" y="79">
+				<path name="pinacoteca"/>
+			</entity>
+			<entity id="2" name="maestro" fq-name="pinacoteca.maestro" order="1" x="210" y="374">
+				<path name="pinacoteca"/>
+			</entity>
+			<entity id="3" name="maestro_pintor" fq-name="pinacoteca.maestro_pintor" order="2" x="20" y="308">
+				<path name="pinacoteca"/>
+			</entity>
+			<entity id="4" name="mecena" fq-name="pinacoteca.mecena" order="3" x="277" y="600">
+				<path name="pinacoteca"/>
+			</entity>
+			<entity id="5" name="mecena_pintor" fq-name="pinacoteca.mecena_pintor" order="4" x="427" y="414">
+				<path name="pinacoteca"/>
+			</entity>
+			<entity id="6" name="pinacoteca" fq-name="pinacoteca.pinacoteca" order="5" x="210" y="20">
+				<path name="pinacoteca"/>
+			</entity>
+			<entity id="7" name="pintor" fq-name="pinacoteca.pintor" order="6" x="210" y="187">
+				<path name="pinacoteca"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="Maestro_Pintor_FK_1" fq-name="pinacoteca.maestro_pintor.Maestro_Pintor_FK_1" type="fk" pk-ref="2" fk-ref="3"/>
+		<relation name="Mecena_Pintor_FK_1" fq-name="pinacoteca.mecena_pintor.Mecena_Pintor_FK_1" type="fk" pk-ref="4" fk-ref="5"/>
+		<relation name="Cuadro_FK" fq-name="pinacoteca.cuadro.Cuadro_FK" type="fk" pk-ref="6" fk-ref="1"/>
+		<relation name="Cuadro_FK_1" fq-name="pinacoteca.cuadro.Cuadro_FK_1" type="fk" pk-ref="7" fk-ref="1"/>
+		<relation name="Maestro_Pintor_FK" fq-name="pinacoteca.maestro_pintor.Maestro_Pintor_FK" type="fk" pk-ref="7" fk-ref="3"/>
+		<relation name="Mecena_Pintor_FK" fq-name="pinacoteca.mecena_pintor.Mecena_Pintor_FK" type="fk" pk-ref="7" fk-ref="5"/>
+	</relations>
+</diagram>
