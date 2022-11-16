@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="gimnacio">
+	<entities>
+		<data-source id="mysql8-18481dd69b9-14e3034d5ac0fbda">
+			<entity id="1" name="sala" fq-name="gimnacio.sala">
+				<path name="gimnacio"/>
+			</entity>
+			<entity id="2" name="entrenador" fq-name="gimnacio.entrenador">
+				<path name="gimnacio"/>
+			</entity>
+			<entity id="3" name="aparato" fq-name="gimnacio.aparato">
+				<path name="gimnacio"/>
+			</entity>
+			<entity id="4" name="clase" fq-name="gimnacio.clase">
+				<path name="gimnacio"/>
+			</entity>
+			<entity id="5" name="dia_imparte" fq-name="gimnacio.dia_imparte">
+				<path name="gimnacio"/>
+			</entity>
+			<entity id="6" name="clase_dia" fq-name="gimnacio.clase_dia">
+				<path name="gimnacio"/>
+			</entity>
+			<entity id="7" name="socio" fq-name="gimnacio.socio">
+				<path name="gimnacio"/>
+			</entity>
+			<entity id="8" name="dato_bancario" fq-name="gimnacio.dato_bancario">
+				<path name="gimnacio"/>
+			</entity>
+			<entity id="9" name="socio_asiste_clase" fq-name="gimnacio.socio_asiste_clase">
+				<path name="gimnacio"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="aparato_FK" fq-name="gimnacio.aparato.aparato_FK" type="fk" pk-ref="1" fk-ref="3"/>
+		<relation name="clase_FK" fq-name="gimnacio.clase.clase_FK" type="fk" pk-ref="1" fk-ref="4"/>
+		<relation name="clase_FK_1" fq-name="gimnacio.clase.clase_FK_1" type="fk" pk-ref="2" fk-ref="4"/>
+		<relation name="clase_dia_FK" fq-name="gimnacio.clase_dia.clase_dia_FK" type="fk" pk-ref="4" fk-ref="6"/>
+		<relation name="socio_asiste_clase_FK" fq-name="gimnacio.socio_asiste_clase.socio_asiste_clase_FK" type="fk" pk-ref="4" fk-ref="9"/>
+		<relation name="clase_dia_FK_1" fq-name="gimnacio.clase_dia.clase_dia_FK_1" type="fk" pk-ref="5" fk-ref="6"/>
+		<relation name="dato_bancario_FK" fq-name="gimnacio.dato_bancario.dato_bancario_FK" type="fk" pk-ref="7" fk-ref="8"/>
+		<relation name="socio_asiste_clase_FK_1" fq-name="gimnacio.socio_asiste_clase.socio_asiste_clase_FK_1" type="fk" pk-ref="7" fk-ref="9"/>
+	</relations>
+</diagram>
